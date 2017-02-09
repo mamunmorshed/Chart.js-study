@@ -116,3 +116,43 @@ new Chart(chartthree, {
     }
 
 });
+
+var chartfour = document.querySelectorAll('.chartfour')[0];
+new Chart(chartfour, {
+    type: 'line',
+    data: {
+        labels: ["Red", "Blue", "Green", "Yellow", "Orange", "Cyan"],
+        datasets:[{
+            label: '# of votes',
+            data: [12, 19, 2, 5, 3, 3],
+            fill: true,
+            pointRadius: 0,
+            backgroundColor: 'rgba(153, 102, 255, 0.2)',
+            borderColor: 'rgba(153, 102, 255, 0)',
+            borderWidth: 1
+        }]
+    },
+    options: {
+        title:{
+            display: true,
+            text: 'my chart work',
+            position: 'bottom'
+        },
+        legend: {
+            display: false,
+            position:'bottom'
+        },
+        hover: {
+            mode: 'nearest'
+        },
+        responsive: true,
+        scales: {
+            yAxes:[{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+
+});
