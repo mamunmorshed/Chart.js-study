@@ -48,9 +48,7 @@ new Chart(charttwo, {
         datasets:[{
             label: '# of votes',
             data: [12, 19, 2, 5, 3, 3],
-            backgroundColor: [
-                'rgba(54, 162, 235, 0.2)'
-            ],
+            backgroundColor: "rgba(54, 162, 235, 0.2)",
             borderWidth: 2
         }]
     },
@@ -156,3 +154,4 @@ new Chart(chartfour, {
     }
 
 });
+
