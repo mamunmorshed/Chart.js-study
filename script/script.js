@@ -262,3 +262,59 @@ new Chart(chartsix, {
 
 });
 
+
+
+var chartseven = document.querySelectorAll('.chartseven')[0];
+new Chart(chartseven, {
+    type: 'bar',
+    data: {
+        labels: ["Red", "Blue", "Green", "Yellow", "Orange", "Cyan"],
+        datasets:[
+        {
+            type: 'line',
+            label: '# of 2nd round votes',
+            data: [32, 9, 20, 15, 30, 13],
+            fill: true,
+            backgroundColor: 'rgba(255, 206, 86, 0.2)',
+            borderColor: 'rgba(255, 206, 86, 1)',
+            borderWidth: 1,
+            borderDash: [5,2],
+            pointRadius: 3,
+            pointBorderColor:  'rgba(255, 206, 86, 1)',
+            pointBackgroundColor:  'rgba(255, 206, 86, 1)',
+            pointStyle: 'circle'
+        },{
+                type: 'bar',
+                label: '# of 1st round votes',
+                data: [12, 19, 22, 25, 13, 30],
+                fill: true,
+                backgroundColor: 'rgba(153, 102, 255, 1)',
+                borderColor: 'rgba(153, 102, 255, 1)',
+                borderWidth: 1
+            }]
+    },
+    options: {
+        title:{
+            display: false,
+            text: 'my chart work',
+            position: 'bottom'
+        },
+        legend: {
+            display: true,
+            position:'top'
+        },
+        hover: {
+            mode: 'nearest'
+        },
+        responsive: true,
+        scales: {
+            yAxes:[{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+
+});
+
