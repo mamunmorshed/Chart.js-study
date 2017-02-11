@@ -466,16 +466,20 @@ new Chart(chartten, {
 
 });
 
-
 var charteleven = document.querySelectorAll('.charteleven')[0];
 new Chart(charteleven, {
-    type: 'doughnut',
+    type: 'bubble',
     data: {
         labels: ["Red", "Blue", "Green", "Yellow", "Orange", "Cyan"],
         datasets:[
-        {
-            label: 'My Data-set',
-            data: [32, 9, 20, 15, 30, 13],
+        {   label: 'My Data-set',
+            data:  [{x: 10, y:1, r:5},
+                    {x: 5, y:35, r:10},
+                    {x: 10, y:35, r:8},
+                    {x: 20, y:3, r:15},
+                    {x: 5, y:19, r:9},
+                    {x: 30, y:50, r:11}
+                ],
             fill: true,
             backgroundColor: [
                 'rgba(255, 99, 132, 0.5)',
@@ -485,13 +489,24 @@ new Chart(charteleven, {
                 'rgba(153, 102, 255, 0.5)',
                 'rgba(255, 159, 64, 0.5)'
             ],
-            hoverBackgroundColor: [
-                'rgba(255, 99, 132, 1)',
-                'rgba(54, 162, 235, 1)',
-                'rgba(255, 206, 86, 1)',
-                'rgba(75, 192, 192, 1)',
-                'rgba(153, 102, 255, 1)',
-                'rgba(255, 159, 64, 1)'
+            borderWidth: 1
+        },
+        {   label: 'My Data-set',
+            data:  [{x: 5, y:19, r:9},
+                    {x: 20, y:3, r:15},
+                    {x: 1, y:20, r:10},
+                    {x: 20, y:45, r:8},
+                    {x: 10, y:1, r:5},
+                    {x: 20, y:30, r:11}
+                ],
+            fill: true,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+                'rgba(75, 192, 192, 0.5)',
+                'rgba(153, 102, 255, 0.5)',
+                'rgba(255, 159, 64, 0.5)'
             ],
             borderWidth: 1
         }]
