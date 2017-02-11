@@ -262,8 +262,6 @@ new Chart(chartsix, {
 
 });
 
-
-
 var chartseven = document.querySelectorAll('.chartseven')[0];
 new Chart(chartseven, {
     type: 'bar',
@@ -292,6 +290,61 @@ new Chart(chartseven, {
                 borderColor: 'rgba(153, 102, 255, 1)',
                 borderWidth: 1
             }]
+    },
+    options: {
+        title:{
+            display: false,
+            text: 'my chart work',
+            position: 'bottom'
+        },
+        legend: {
+            display: true,
+            position:'top'
+        },
+        hover: {
+            mode: 'nearest'
+        },
+        responsive: true,
+        scales: {
+            yAxes:[{
+                ticks: {
+                    beginAtZero: true
+                }
+            }]
+        }
+    }
+
+});
+
+
+var charteight = document.querySelectorAll('.charteight')[0];
+new Chart(charteight, {
+    type: 'polarArea',
+    data: {
+        labels: ["Red", "Blue", "Green", "Yellow", "Orange", "Cyan"],
+        datasets:[
+        {
+            label: 'My Data-set',
+            data: [32, 9, 20, 15, 30, 13],
+            fill: true,
+            backgroundColor: [
+                'rgba(255, 99, 132, 0.5)',
+                'rgba(54, 162, 235, 0.5)',
+                'rgba(255, 206, 86, 0.5)',
+                'rgba(75, 192, 192, 0.5)',
+                'rgba(153, 102, 255, 0.5)',
+                'rgba(255, 159, 64, 0.5)'
+            ],
+            borderColor: [
+                'rgba(255, 99, 132, 1)',
+                'rgba(54, 162, 235, 1)',
+                'rgba(255, 206, 86, 1)',
+                'rgba(75, 192, 192, 1)',
+                'rgba(153, 102, 255, 1)',
+                'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+        }]
     },
     options: {
         title:{
